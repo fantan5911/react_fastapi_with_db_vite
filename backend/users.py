@@ -36,5 +36,4 @@ def add_user(req: UserLogin):
         if user["email"] == req.email and user["password"] == req.password:
             return "Успешно авторизован"
         
-        else:
-            return "Неправильная почта или пароль"
+        return "Неправильная почта или пароль"
