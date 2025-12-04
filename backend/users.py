@@ -32,6 +32,8 @@ def add_user(req: UserRegister):
 
 @router.post("/users/login")
 def add_user(req: UserLogin):
+    global users
+
     for user in users:
         if user["email"] == req.email and user["password"] == req.password:
             return "Успешно авторизован"
