@@ -1,9 +1,10 @@
 import './App.css'
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import NotFound from './pages/NotFound';
 import { useState } from 'react';
+import AccountLink from './Links/AccountLink';
 
 function App() {
   const debug = true;
@@ -17,6 +18,8 @@ function App() {
     <>
       <div>
         <BrowserRouter>
+            <AccountLink link="/register" user={user} setUser={setUser}>Register</AccountLink>
+            <AccountLink link="/login" user={user} setUser={setUser}>Login</AccountLink>
           <Routes>
             <Route path="/login" element={<Login debug={debug} user={user} setUser={setUser}/>}/>
             <Route path="/register" element={<Register debug={debug} user={user} setUser={setUser}/>}/>
