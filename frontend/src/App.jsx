@@ -21,6 +21,7 @@ function App() {
             <AccountLink link="/register" user={user} setUser={setUser}>Register</AccountLink>
             <AccountLink link="/login" user={user} setUser={setUser}>Login</AccountLink>
           <Routes>
+            <Route path="/" element={<div style={{fontSize: '25px'}}>Main page</div>}/>
             <Route path="/login" element={<Login debug={debug} user={user} setUser={setUser}/>}/>
             <Route path="/register" element={<Register debug={debug} user={user} setUser={setUser}/>}/>
             <Route path="*" element={<NotFound/>}/>
