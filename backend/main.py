@@ -12,7 +12,8 @@ PORT = int(os.getenv("PORT"))
 
 origins = [
     "http://localhost",
-    "http://localhost:80"
+    "http://localhost:80",
+    "https://backend-jyed.onrender.com"
 ]
 
 app.add_middleware(
@@ -26,4 +27,4 @@ app.add_middleware(
 app.include_router(router)
 
 if __name__ == '__main__':
-    uvicorn.run("main:app", port=PORT)
+    uvicorn.run("main:app", host="0.0.0.0", port=PORT)
