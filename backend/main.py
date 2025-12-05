@@ -13,7 +13,6 @@ PORT = int(os.getenv("PORT"))
 origins = [
     "http://localhost",
     "http://localhost:80",
-    "https://backend-jyed.onrender.com"
 ]
 
 app.add_middleware(
