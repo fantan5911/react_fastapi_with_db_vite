@@ -3,7 +3,9 @@ from forms import UserLogin, UserRegister
 from random import randint
 
 
-router = APIRouter()
+router = APIRouter(
+    prefix='/api'
+)
 
 NextID = randint(1, 999695995)
 
